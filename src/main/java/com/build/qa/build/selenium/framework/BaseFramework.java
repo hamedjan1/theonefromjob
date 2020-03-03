@@ -14,9 +14,11 @@ import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.slf4j.Logger;
@@ -30,6 +32,10 @@ public abstract class BaseFramework {
 	private static final String DRIVER_FIREFOX = "firefox";
 	private static final String DRIVER_CHROME = "chrome";
 	private static Properties configuration;
+
+
+	@FindBy(css = "fgfhfgh")
+	public WebElement title;
 
 	@Rule
 	public final JUnitSoftAssertions softly = new JUnitSoftAssertions();
