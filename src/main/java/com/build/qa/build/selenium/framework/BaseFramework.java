@@ -34,8 +34,89 @@ public abstract class BaseFramework {
 	private static Properties configuration;
 
 
-	@FindBy(css = "fgfhfgh")
+
+	@FindBy(id = "search_txt")
+	public WebElement searchbox;
+
+	@FindBy(className = "inline-block pad-right")
 	public WebElement title;
+
+	@FindBy(className = "close-icon")
+	public WebElement close;
+
+
+	@FindBy(xpath = "(//div[@class=\"c-tile-bg-image c-group-item-bg-image \"])[1]")
+	public WebElement dropin;
+
+
+	@FindBy(xpath = "(//a[@href=\"/kohler-k-2609-su/s911329?uid=2285063\"])[2]")
+	public  WebElement itemtwo;
+
+	@FindBy(xpath = "//div[contains(text(),'Add to Cart')")
+	public WebElement addtocart;
+
+    @FindBy(css = "button[data-original-title='Add to Cart']")
+	public WebElement addtocart1;
+
+@FindBy(xpath = "(//button[@data-automation='close'])[2]")
+public WebElement popup;
+
+@FindBy(xpath = "//span[@style='left:3px']")
+public WebElement cart;
+
+@FindBy(css = "span[class='fw2 lh-title']")
+public WebElement verifyorder;
+
+@FindBy(css = "a[onclick=\"s_objectID='1';\"]")
+public WebElement cart1;
+
+@FindBy(xpath = "//div[@data-component-type=\"selectBox\"]")
+public WebElement selectbox;
+
+@FindBy(xpath = "//li[@onclick=\"s_objectID='Finish select Email Cart';\"]")
+public WebElement emailcart;
+
+@FindBy(css = "input[data-automation='your-name-field']")
+public WebElement yourname;
+
+@FindBy(css = "input[data-automation='your-email-field']")
+public WebElement youremail;
+
+@FindBy(css = "input[data-automation='recipient-name-field']")
+public WebElement recipientname;
+
+@FindBy(css = "input[data-automation='recipient-email-field']")
+public WebElement recpientemail;
+
+@FindBy(xpath = "//textarea[@id='quoteMessage']")
+public WebElement emailbody;
+
+@FindBy(css = "button[data-automation='confirm-email-cart-button']")
+public WebElement sendemail;
+
+@FindBy(css = "li[class=\"theme-success list pt f4-ns ma0 tc\"]")
+public WebElement titleverify;
+
+@FindBy(css = "li[data-groupname='Colors']")
+public WebElement color;
+
+@FindBy(css = "label[data-facet-value='Chromes']")
+public WebElement chromecolor;
+
+@FindBy(css = "li[data-groupname='Theme']")
+public WebElement theme;
+
+@FindBy(css = "label[data-facet-value='Modern']")
+public WebElement modern;
+
+@FindBy(xpath = "(//span[@data-automation='limit-facet-item'])[1]")
+public WebElement verifychrome;
+
+@FindBy(xpath = "(//span[@data-automation='limit-facet-item'])[2]")
+public WebElement verifymodern;
+
+
+
 
 	@Rule
 	public final JUnitSoftAssertions softly = new JUnitSoftAssertions();
@@ -79,7 +160,7 @@ public abstract class BaseFramework {
 	@After
 	public void tearDownAfter() {
 		LOG.info("Quitting driver.");
-		driver.quit();
-		driver = null;
+//		driver.quit();
+//		driver = null;
 	}
 }
