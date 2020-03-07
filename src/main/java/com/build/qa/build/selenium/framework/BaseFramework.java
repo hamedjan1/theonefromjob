@@ -100,13 +100,13 @@ public WebElement titleverify;
 @FindBy(css = "li[data-groupname='Colors']")
 public WebElement color;
 
-@FindBy(css = "label[data-facet-value='Chromes']")
+@FindBy(xpath = "//label[@data-facet-value='Chromes']/input")
 public WebElement chromecolor;
 
 @FindBy(css = "li[data-groupname='Theme']")
 public WebElement theme;
 
-@FindBy(css = "label[data-facet-value='Modern']")
+@FindBy(xpath = "(//label[@data-facet-value='Modern']/input)[1]")
 public WebElement modern;
 
 @FindBy(xpath = "(//span[@data-automation='limit-facet-item'])[1]")

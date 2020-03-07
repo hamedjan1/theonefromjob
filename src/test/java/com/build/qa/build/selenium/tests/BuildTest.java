@@ -140,7 +140,6 @@ h.popup.click();
 		h.searchbox.sendKeys("Bathroom Faucets"+ Keys.ENTER);
         h.color.click();
         h.chromecolor.click();
-		System.out.println(h.chromecolor.isDisplayed());
 
 		Thread.sleep(4000);
 
@@ -148,9 +147,11 @@ h.popup.click();
         h.theme.click();
         h.modern.click();
 
-		System.out.println(h.modern.isDisplayed());
+		System.out.println(h.chromecolor.isSelected());
 
-		// TODO: Implement this test
+		System.out.println(h.modern.isSelected());
+
+		//TODO: Implement this test
 }
 
 }
